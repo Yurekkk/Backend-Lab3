@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  project-db:
+    image: 'postgres:latest'
+    container_name: 'container'
+    environment:
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=admin'
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
+      - 'POSTGRES_DB=java'
+    ports:
+      - "5432:5432"
